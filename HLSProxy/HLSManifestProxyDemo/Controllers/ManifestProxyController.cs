@@ -36,6 +36,7 @@ namespace Microsoft.Azure.CloudVideo.VideoManagementService.Cms.Controllers
             //}
             var collection = HttpUtility.ParseQueryString(token);
             var authToken = collection.ToQueryString();
+              
             string armoredAuthToken = HttpUtility.UrlEncode(authToken);
 
             var httpRequest = (HttpWebRequest)WebRequest.Create(new Uri(playbackUrl));
